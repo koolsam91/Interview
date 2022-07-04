@@ -1,0 +1,23 @@
+<h1>{{ title }}</h1>
+
+<div class = "container">
+  <table class="table">
+    <thead class="thead-dark">
+      <th scope="col">Date</th>
+      <th>Temperature-High</th>
+      <th>Temperature-Low</th>
+      <th>Humidity-High</th>
+      <th>Humidity-Low</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let dt of tempData">
+        <td>{{dt.date}}</td>
+        <td>{{dt.temperature['high']}}</td>
+        <td>{{dt.temperature['low']}}</td>
+        <td>{{dt.relative_humidity['high']}}</td>
+        <td>{{dt.relative_humidity['low']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
